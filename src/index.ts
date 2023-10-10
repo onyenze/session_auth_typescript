@@ -6,6 +6,7 @@ import compression from "compression"
 import cors from "cors"
 import mongoose from "mongoose"
 
+import router from "./router"
 const app = express()
 
 app.use(cors({
@@ -31,3 +32,5 @@ server.listen(3090, ()=>{
  mongoose.connect(MONGODB_URL)
  mongoose.connection.on("error", (error:Error)=>{console.log(error)});
  
+
+app.use("/", router())
