@@ -70,6 +70,3 @@ export const register = async (req: express.Request, res: express.Response) => {
     }
 }
 
-export const getAllUsers =async (req:express.Request, res:express.Response) => {
-    
-}
